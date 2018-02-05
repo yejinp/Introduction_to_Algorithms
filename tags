@@ -1,0 +1,64 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+APP	chapter10/Makefile	/^APP=$(pwd)\/app$/;"	m
+AR	chapter10/env.mk	/^AR=ar$/;"	m
+BIN	chapter10/Makefile	/^BIN=$(pwd)\/bin$/;"	m
+BIN	chapter10/src/Makefile	/^BIN:=$(dir)\/..\/bin$/;"	m
+CC	chapter10/Makefile	/^CC?=gcc$/;"	m
+CC	chapter10/env.mk	/^CC=gcc$/;"	m
+CFLAGS	chapter10/src/Makefile	/^CFLAGS:=-I$(HEADERS) -g -Wall$/;"	m
+CHAPTERS	makefile	/^CHAPTERS:=$(wildcard chapter*)$/;"	m
+HEADERS	chapter10/Makefile	/^HEADERS:=$(pwd)\/include\/$/;"	m
+HEADERS	chapter10/src/Makefile	/^HEADERS:=$(dir)\/..\/include\/$/;"	m
+MAKE	chapter10/Makefile	/^MAKE?=make$/;"	m
+MAKE	chapter10/env.mk	/^MAKE=make$/;"	m
+MKDIR	chapter10/env.mk	/^MKDIR=mkdir$/;"	m
+OBJ	chapter10/src/Makefile	/^OBJ:=$(dir)\/..\/obj$/;"	m
+OBJ_DIR	chapter10/Makefile	/^OBJ_DIR=$(pwd)\/obj$/;"	m
+QUEUE_EMPTY	chapter10/include/queue.h	13;"	d
+QUEUE_ENQUEUE_FAIL	chapter10/include/queue.h	17;"	d
+QUEUE_ENQUEUE_OK	chapter10/include/queue.h	16;"	d
+QUEUE_FULL	chapter10/include/queue.h	10;"	d
+QUEUE_NOT_EMPTY	chapter10/include/queue.h	14;"	d
+QUEUE_NOT_FULL	chapter10/include/queue.h	11;"	d
+RM	chapter10/env.mk	/^RM=rm$/;"	m
+SRC	chapter10/Makefile	/^SRC=src$/;"	m
+__DATA_H__	chapter10/include/data.h	2;"	d
+__QUEUE_H__	chapter10/include/queue.h	8;"	d
+__STACK_H__	chapter10/include/stack.h	2;"	d
+data	chapter10/include/data.h	/^struct data {$/;"	s
+data	chapter10/include/queue.h	/^  void **data;$/;"	m	struct:queue
+data	chapter10/include/stack.h	/^    void **data;$/;"	m	struct:stack_t
+dequeue	chapter10/src/queue.c	/^void *dequeue(struct queue *q)$/;"	f
+dir	chapter10/src/Makefile	/^dir=$(shell pwd)$/;"	m
+enqueue	chapter10/src/queue.c	/^int enqueue(struct queue *q, void *data)$/;"	f
+head	chapter10/include/queue.h	/^  unsigned long head;$/;"	m	struct:queue
+key	chapter10/include/data.h	/^  int key;$/;"	m	struct:data
+main	chapter10/app/stack_main.c	/^int main(int argc, char ** argv) $/;"	f
+main	test/src/test_main.c	/^int main(int argc, char **argv) {$/;"	f
+objects	chapter10/src/Makefile	/^objects=$(wildcard *.c)$/;"	m
+pop_all	chapter10/app/stack_main.c	/^void pop_all(struct stack_t *s)$/;"	f
+push_all	chapter10/app/stack_main.c	/^void push_all()$/;"	f
+pwd	chapter10/Makefile	/^pwd=$(shell pwd)$/;"	m
+queue	chapter10/include/queue.h	/^struct queue {$/;"	s
+queue_create	chapter10/src/queue.c	/^struct queue *queue_create(unsigned long size)$/;"	f
+queue_is_empty	chapter10/src/queue.c	/^int queue_is_empty(struct queue *q)$/;"	f
+queue_is_full	chapter10/src/queue.c	/^int queue_is_full(struct queue *q)$/;"	f
+queuq_free	chapter10/src/queue.c	/^void queuq_free(struct queue *q)$/;"	f
+size	chapter10/include/queue.h	/^  unsigned long size;$/;"	m	struct:queue
+size	chapter10/include/stack.h	/^    unsigned long size;$/;"	m	struct:stack_t
+stack_create	chapter10/src/stack.c	/^struct stack_t * stack_create(unsigned long size)$/;"	f
+stack_empty	chapter10/src/stack.c	/^int stack_empty(struct stack_t *s)$/;"	f
+stack_free	chapter10/src/stack.c	/^void stack_free(struct stack_t *s)$/;"	f
+stack_full	chapter10/src/stack.c	/^int stack_full(struct stack_t *s)$/;"	f
+stack_get_count	chapter10/src/stack.c	/^unsigned long stack_get_count(struct stack_t *s)$/;"	f
+stack_get_size	chapter10/src/stack.c	/^unsigned long stack_get_size(struct stack_t *s)$/;"	f
+stack_pop	chapter10/src/stack.c	/^void *stack_pop(struct stack_t *s)$/;"	f
+stack_push	chapter10/src/stack.c	/^int stack_push(struct stack_t *s, void *data)$/;"	f
+stack_t	chapter10/include/stack.h	/^struct stack_t {$/;"	s
+tail	chapter10/include/queue.h	/^  unsigned long tail;$/;"	m	struct:queue
+top	chapter10/include/stack.h	/^    unsigned long top;$/;"	m	struct:stack_t
