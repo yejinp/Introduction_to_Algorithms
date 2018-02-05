@@ -34,7 +34,7 @@ struct queue *queue_create(unsigned long size)
     return q;
 }
 
-void queuq_free(struct queue *q)
+void queue_free(struct queue *q)
 {
     if(q == NULL) {
         return ;

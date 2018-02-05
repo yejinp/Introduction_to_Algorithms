@@ -22,6 +22,7 @@ int main(int argc, char **argv)
 		exit(6);
 	}
 	printf("data is: %d\n", d->key);
+	free(d);
 
 	d = (struct data *)dequeue(q);
 	if(d == NULL) 
@@ -31,5 +32,6 @@ int main(int argc, char **argv)
 	}
 	
 	printf("data is: %d\n", d->key);
+	queue_free(q);
 
 }
