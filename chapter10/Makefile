@@ -10,28 +10,23 @@ OBJ_DIR=$(pwd)/obj
 BIN=$(pwd)/bin
 APP=$(pwd)/app
 
+srcs=$(wildcard src/*.c)
+objects=$(patsubst %.c,%.o, $(subst src,obj, $(srcs)))
+
 HEADERS:=$(pwd)/include/
 
 .PHONY:all
-all: mkdir stack queue;
+all: mkdir $(objects);
 
-
-#@cd $(SRC) && $(MAKE)  HEADERS="$(HEADERS)" CC=$(CC) MAKE=$(MAKE)
+$(objects): $(srcs)
+	gcc -c -o $@  $< -I$(HEADERS)
 
 mkdir:
-	@-mkdir -p $(OBJ_DIR)
-	@-mkdir -p $(BIN)
-
-stack:mkdir
-	@cd $(SRC) && $(MAKE) HEADERS="$(HEADERS)" CC=$(CC) MAKE=$(MAKE) TARGET=stack
-	@gcc -o $(BIN)/stack_main app/stack_main.c $(OBJ_DIR)/*.o  -I$(HEADERS) -g -Wall
-
-queue:mkdir
-	@cd $(SRC) && $(MAKE) HEADERS="$(HEADERS)" CC=$(CC) MAKE=$(MAKE) TARGET=queue
-	@gcc -o $(BIN)/queue_main app/queue_main.c $(OBJ_DIR)/*.o  -I$(HEADERS) -g -Wall
+	-mkdir -p $(OBJ_DIR)
+	-mkdir -p $(BIN)
 
 .PHONY:clean
 clean:
-	@rm -rf $(OBJ_DIR)
-	@rm -rf $(BIN)
+	rm -rf $(OBJ_DIR)
+	rm -rf $(BIN)
 
