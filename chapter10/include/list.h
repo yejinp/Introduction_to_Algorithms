@@ -20,4 +20,8 @@ struct double_head {
     struct double_list *head;
 };
 
+struct single_list * single_list_create();
+void * single_list_free(struct single_list *s);
+struct double_list * double_list_create();
+
 #endif
