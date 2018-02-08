@@ -5,8 +5,8 @@
 #include <stdio.h>
 
 struct single_list{
-    int key;
     struct single_list *next;
+    void *data;
 };
 
 struct single_head {
@@ -14,9 +14,9 @@ struct single_head {
 };
 
 struct double_list{
-    int key;
     struct double_list *prev;
     struct double_list *next;
+    void *data;
 };
 
 struct double_head {

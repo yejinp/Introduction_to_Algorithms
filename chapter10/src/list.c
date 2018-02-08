@@ -24,6 +24,12 @@ int single_list_insert(struct single_head *h, struct single_list *s)
 	return 1;
 }
 
+int single_list_delete(struct single_head *hs, struct single_list *s)
+{
+
+	return 1;
+}
+
 struct double_list * double_list_create()
 {
 	struct double_list *d = NULL;
@@ -41,6 +47,12 @@ void double_list_free(struct double_list *d)
 }
 
 int double_list_insert(struct double_head *h, struct double_list *d)
+{
+
+	return 1;
+}
+
+int double_list_delete(struct double_head *hd, struct double_list *d)
 {
 
 	return 1;

@@ -14,20 +14,21 @@ srcs=$(wildcard src/*.c)
 objects=$(patsubst %.c,%.o, $(subst src,obj, $(srcs)))
 bins=$(patsubst %.c, %, $(subst src/,, $(srcs)))
 
-HEADERS:=$(pwd)/include/
+HEADERS:=$(wildcard $(pwd)/include/*.h)
+INCLUDE:=$(pwd)/include/
 
 .PHONY:all
 all: mkdir bins;
 
-$(objects): $(srcs)
-	gcc -c -o $@  $(patsubst %.o,%.c,$(subst obj,src,$@)) -I$(HEADERS)
+$(objects): $(srcs) $(HEADERS)
+	gcc -c -o $@  $(patsubst %.o,%.c,$(subst obj,src,$@)) -I$(INCLUDE)
 
 mkdir:
 	mkdir -p $(OBJ_DIR)
 	mkdir -p $(BIN)
 
 bins:$(objects)
-	for sub_app in $(bins); do gcc -o $(BIN)/$${sub_app}_main $(APP)/$${sub_app}_main.c  -I$(HEADERS) $(objects); done
+	for sub_app in $(bins); do gcc -o $(BIN)/$${sub_app}_main $(APP)/$${sub_app}_main.c  -I$(INCLUDE) $(objects); done
 	
 
 .PHONY:clean
