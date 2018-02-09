@@ -9,6 +9,7 @@ struct single_list * single_list_create()
 	if(s == NULL) {
 		printf("malloc single_list failed.\n");
 	}
+	memset(s, 0, sizeof(*s));
 
 	return s;
 }
@@ -20,6 +21,11 @@ void single_list_free(struct single_list *s)
 
 int single_list_insert(struct single_head *h, struct single_list *s)
 {
+	if(NULL == h || NULL == s) {
+		return 0;
+	}
+
+//	h->;
 
 	return 1;
 }
@@ -38,6 +44,7 @@ struct double_list * double_list_create()
 	if(d == NULL) {
 		printf("malloc double failed.\n");
 	}
+	memset(d, 0, sizeof(*d));
 	return d;
 }
 
