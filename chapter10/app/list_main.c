@@ -6,12 +6,12 @@
 
 int main(int argc, char **argv) {
 	printf("list\n");
-	struct single_head *hs = NULL;
-	struct double_head *hd = NULL;
+	struct single_list *hs = NULL;
+	struct double_list *hd = NULL;
 	
-	hs = (struct single_head *) malloc(sizeof(struct single_head));
+	hs = (struct single_list *) malloc(sizeof(struct single_list));
 	if(hs == NULL) {
-		printf("malloc single_head failed.\n");
+		printf("malloc single_list failed.\n");
 		exit(5);
 	}
 
