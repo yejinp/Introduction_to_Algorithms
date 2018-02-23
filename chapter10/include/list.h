@@ -20,11 +20,14 @@ struct double_list{
     void *data;
 };
 
-int single_list_insert(struct single_list *hs, struct single_list *s);
 struct single_list *single_list_create();
+int single_list_insert(struct single_list *hs, struct single_list *s);
+void *single_list_search(struct single_list *sh, void *key);
 void single_list_free(struct single_list *s);
 
 struct double_list *double_list_create();
 void double_list_free(struct double_list *d);
+
+void *double_list_search(struct double_list *dh, void *key);
 
 #endif

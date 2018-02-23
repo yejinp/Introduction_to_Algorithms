@@ -12,6 +12,17 @@ struct single_list * single_list_create()
 	return s;
 }
 
+void *single_list_search(struct single_list *sh, void *key)
+{
+
+	return NULL;
+}
+
+void *double_list_search(struct double_list *dh, void *key)
+{
+
+}
+
 void single_list_free(struct single_list *s)
 {
 	free(s);
@@ -101,3 +112,4 @@ int double_list_delete(struct double_list *hd, struct double_list *d)
 	}
 	return 1;
 }
+
