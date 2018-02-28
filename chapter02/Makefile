@@ -19,8 +19,7 @@ all:mkdir objects bins;
 mkdir:
 	mkdir -p $(OBJ_DIR)
 	mkdir -p $(BIN)
-objects: $(SRCS) $(HEADERS)
-	$(CC) -g -c -o $@ $(pathsubst %.o,%.c,$(subst obj,src,$@)) $(INCLUDES) 
+objects: $(SRCS) $(HEADERS);
 
 bins:
 	@echo "make bins"
