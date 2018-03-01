@@ -21,8 +21,8 @@ $(warning $(OBJECTS))
 all:mkdir bins;
 
 mkdir:
-	mkdir -p $(OBJ_DIR)
-	mkdir -p $(BIN)
+	mkdir  $(OBJ_DIR)
+	mkdir  $(BIN)
 $(OBJECTS): $(SRCS) $(HEADERS)
 	$(CC) -g -c -o $@ $< $(INCLUDES) 
 
