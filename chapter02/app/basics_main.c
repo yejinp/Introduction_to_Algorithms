@@ -24,7 +24,8 @@ int main(int argc, char **argv)
 	int array[ARRAY_SIZE];
 	print_array(array, 0 , ARRAY_SIZE - 1);
 
-	insert_sort(array, 0, ARRAY_SIZE - 1);
+	//insert_sort(array, 0, ARRAY_SIZE - 1);
+	select_sort(array, 0, ARRAY_SIZE - 1);
 	printf("after sorted:\n");
 	print_array(array, 0 , ARRAY_SIZE - 1);
 	printf("insertsort end.\n");
