@@ -1,5 +1,15 @@
 #include "basics.h"
 
+void merge(int *array, int p, int q, int r)
+{
+
+}
+
+void merge_sort(int *array, int p, int r)
+{
+
+}
+
 static void exchange_a_value(int *array, int a, int b)
 {
 	if(a == b)

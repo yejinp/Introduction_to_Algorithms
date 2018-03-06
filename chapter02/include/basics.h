@@ -4,4 +4,6 @@
 int insert_sort(int *array, int b, int e);
 
 int select_sort(int *array, int b, int e);
+
+void merge_sort(int *array, int p, int r);
 #endif
