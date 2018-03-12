@@ -1,13 +1,38 @@
 #include "basics.h"
+#include <stdlib.h>
+#include <limits.h>
+#include <stdint.h>
+
+static int g_L[INT_MAX] = {0};
+static int g_R[INT_MAX] = {0};
 
 void merge(int *array, int p, int q, int r)
 {
+	int n1 = q - p + 1;
+	int n2 = r - q;
+	int i = 0, j = 0;
 
+	for(i = 0; i < n1; i++) {
+		g_L[i] = array[p + i -1];
+	}
+
+	for(i = 0; i < n2; i++) {
+		g_R[i] = array[q + i];
+	}
+
+	
 }
 
 void merge_sort(int *array, int p, int r)
 {
+	int q;
 
+	if( p < r) {
+		q = (p + r) / 2;
+		merge_sort(array, p ,q);
+		merge_sort(array, q + 1, r);
+		merge(array, p, q, r);
+	}
 }
 
 static void exchange_a_value(int *array, int a, int b)
