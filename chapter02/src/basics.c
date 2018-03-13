@@ -3,8 +3,8 @@
 #include <limits.h>
 #include <stdint.h>
 
-static int g_L[INT_MAX] = {0};
-static int g_R[INT_MAX] = {0};
+static int g_L[MAX_A_SIZE] = {0};
+static int g_R[MAX_A_SIZE] = {0};
 
 void merge(int *array, int p, int q, int r)
 {
