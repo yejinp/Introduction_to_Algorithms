@@ -17,7 +17,7 @@ void merge(int *array, int p, int q, int r)
 	}
 
 	for(j = 0; j < n2; j++) {
-		g_R[j] = array[q + j];
+		g_R[j] = array[q + j + 1];
 	}
 
 	g_L[n1] = INT_MAX;
@@ -26,7 +26,7 @@ void merge(int *array, int p, int q, int r)
 	i = 0;
 	j = 0;
 
-	for(k = p; k < r; k++) {
+	for(k = p; k < r + 1; k++) {
 		if(g_L[i] <= g_R[j]) {
 			array[k] = g_L[i];
 			i++;
