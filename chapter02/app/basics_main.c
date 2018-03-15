@@ -25,7 +25,8 @@ int main(int argc, char **argv)
 	print_array(array, 0 , ARRAY_SIZE - 1);
 
 	//insert_sort(array, 0, ARRAY_SIZE - 1);
-	select_sort(array, 0, ARRAY_SIZE - 1);
+	//select_sort(array, 0, ARRAY_SIZE - 1);
+	merge_sort(array, 0, ARRAY_SIZE - 1);
 	printf("after sorted:\n");
 	print_array(array, 0 , ARRAY_SIZE - 1);
 	printf("insertsort end.\n");

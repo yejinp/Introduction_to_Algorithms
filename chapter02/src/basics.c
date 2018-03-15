@@ -10,7 +10,7 @@ void merge(int *array, int p, int q, int r)
 {
 	int n1 = q - p + 1;
 	int n2 = r - q;
-	int i = 0, j = 0;
+	int i = 0, j = 0, k;
 
 	for(i = 0; i < n1; i++) {
 		g_L[i] = array[p + i -1];
@@ -20,7 +20,21 @@ void merge(int *array, int p, int q, int r)
 		g_R[i] = array[q + i];
 	}
 
-	
+	g_L[n1] = INT_MAX;
+	g_R[n2] = INT_MAX;
+
+	i = 0;
+	j = 0;
+
+	for(k = p; k < r; k++) {
+		if(g_L[i] <= g_R[j]) {
+			array[k] = g_L[i];
+			i++;
+		} else {
+			array[k] = g_R[j];
+			j++;
+		}
+	}
 }
 
 void merge_sort(int *array, int p, int r)
