@@ -20,11 +20,11 @@ mkdir:
 	mkdir -p $(OBJ_DIR)
 	mkdir -p $(BIN)
 objects: $(SRCS) $(HEADERS);
-	gcc -c -o $(OBJECTS) $(SRCS) $(INCLUDES)
+	gcc -c -g -o $(OBJECTS) $(SRCS) $(INCLUDES)
 
 bins:
 	@echo "make bins"
-	gcc -o $(BIN)/basics_app  app/basics_main.c $(INCLUDES) $(OBJECTS)
+	gcc -o $(BIN)/basics_app -g app/basics_main.c $(INCLUDES) $(OBJECTS)
 
 .PHONY:clean
 clean:

@@ -13,11 +13,11 @@ void merge(int *array, int p, int q, int r)
 	int i = 0, j = 0, k;
 
 	for(i = 0; i < n1; i++) {
-		g_L[i] = array[p + i -1];
+		g_L[i] = array[p + i];
 	}
 
-	for(i = 0; i < n2; i++) {
-		g_R[i] = array[q + i];
+	for(j = 0; j < n2; j++) {
+		g_R[j] = array[q + j];
 	}
 
 	g_L[n1] = INT_MAX;
