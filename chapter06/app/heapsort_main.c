@@ -24,4 +24,6 @@ int main(int argc, char *argv[])
 	print_int_array(array, SIZE);
 	max_heap_sort(array, SIZE);
 	print_int_array(array, SIZE);
+	min_heap_sort(array, SIZE);
+	print_int_array(array, SIZE);
 }
