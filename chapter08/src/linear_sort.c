@@ -1,5 +1,7 @@
 #include "linear_sort.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
 
 struct int_array *int_array_new(size_t	size)
 {
@@ -15,6 +17,33 @@ struct int_array *int_array_new(size_t	size)
 	}
 	
 	return pit;
+}
+
+void print_int_array(struct int_array *pA)
+{
+	int i = 0;
+	for(i = 0; i < pA->size; i++ ) {
+		if(i % 5 == 0) {
+			printf("\n");
+		}
+		printf(" %10d ", pA->data[i]);
+	}
+	printf("\n");
+}
+
+void randomize_int_array(struct int_array *pA, int max_val)
+{
+	if(pA == NULL || max_val == 0) {
+		return;
+	}
+	srandom(time(NULL));
+
+	int i = 0;
+
+	for(i = 0; i < pA->size; i++) {
+		pA->data[i] = rand() % max_val;
+	}
+
 }
 
 void counting_sorting(struct int_array *A, struct int_array *B, struct int_array *C)

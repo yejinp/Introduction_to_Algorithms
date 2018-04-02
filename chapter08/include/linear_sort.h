@@ -11,6 +11,8 @@ struct int_array {
 };
 
 struct int_array *int_array_new(size_t	size);
+void print_int_array(struct int_array *pA);
+void randomize_int_array(struct int_array *pA, int max_val);
 void counting_sorting(struct int_array *A, struct int_array *B, struct int_array *C);
 
 
