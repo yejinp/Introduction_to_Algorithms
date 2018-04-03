@@ -62,7 +62,7 @@ void counting_sorting(struct int_array *A, struct int_array *B, struct int_array
 	}
 
 	for(i = A->size - 1; i >= 0; i --) {
-		B->data[C->data[A->data[i]]] = A->data[i];
+		B->data[C->data[A->data[i]] - 1] = A->data[i];
 		C->data[A->data[i]] = C->data[A->data[i]] - 1;
 	} 
 
