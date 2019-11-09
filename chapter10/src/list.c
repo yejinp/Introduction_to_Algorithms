@@ -2,14 +2,14 @@
 
 struct single_list * single_list_create()
 {
-	struct single_list *s = NULL;
-	s = (struct single_list *) malloc(sizeof(struct single_list));
-	if(s == NULL) {
+	struct single_list *sp = NULL;
+	sp = (struct single_list *) malloc(sizeof(struct single_list));
+	if(sp == NULL) {
 		printf("malloc single_list failed.\n");
 	}
-	memset(s, 0, sizeof(*s));
+	memset(sp, 0, sizeof(*sp));
 
-	return s;
+	return sp;
 }
 
 void *single_list_search(struct single_list *sh, void *key)
@@ -20,6 +20,7 @@ void *single_list_search(struct single_list *sh, void *key)
 
 void *double_list_search(struct double_list *dh, void *key)
 {
+	return NULL;
 
 }
 
@@ -58,14 +59,14 @@ int single_list_delete(struct single_list *hs, struct single_list *s)
 
 struct double_list * double_list_create()
 {
-	struct double_list *d = NULL;
-	d = (struct double_list *)malloc(sizeof(struct double_list));
+	struct double_list *dp = NULL;
+	dp = (struct double_list *)malloc(sizeof(struct double_list));
 	
-	if(d == NULL) {
+	if(dp == NULL) {
 		printf("malloc double failed.\n");
 	}
-	memset(d, 0, sizeof(*d));
-	return d;
+	memset(dp, 0, sizeof(*dp));
+	return dp;
 }
 
 void double_list_free(struct double_list *d)

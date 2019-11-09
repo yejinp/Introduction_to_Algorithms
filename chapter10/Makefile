@@ -23,7 +23,7 @@ all: mkdir bins;
 $(objects): $(srcs) $(HEADERS)
 	gcc -c -o $@  $(patsubst %.o,%.c,$(subst obj,src,$@)) -I$(INCLUDE)
 
-mkdir:
+mkdir: 
 	mkdir -p $(OBJ_DIR)
 	mkdir -p $(BIN)
 
